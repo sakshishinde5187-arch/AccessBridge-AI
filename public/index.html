@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AccessBridge AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">AccessBridge <span>AI</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#how">How It Works</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">AI-POWERED ACCESSIBILITY</p>
+
+                <h1>
+                    Understand Any Document
+                    <span>With Ease.</span>
+                </h1>
+
+                <p class="description">
+                    Upload a notice, document or image. AccessBridge AI
+                    extracts important information, simplifies complex
+                    content and lets you listen to it.
+                </p>
+
+                <button class="start-btn" onclick="scrollToUpload()">
+                    Get Started →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="upload-section" id="upload">
+
+            <div class="upload-card">
+
+                <div class="upload-icon">📄</div>
+
+                <h2>Upload Your Document</h2>
+
+                <p>
+                    Upload a college notice, government document,
+                    scholarship information or any difficult-to-read document.
+                </p>
+
+
+                <!-- =============================== -->
+                <!-- Explanation Language -->
+                <!-- =============================== -->
+
+                <div class="language-section">
+
+                    <h3>🌐 Choose Explanation Language</h3>
+
+                    <p>
+                        Choose the language in which you want
+                        AccessBridge AI to explain the document.
+                    </p>
+
+                    <div class="language-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="language"
+                                value="mr"
+                                checked
+                            >
+                            🇮🇳 मराठी
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="language"
+                                value="en"
+                            >
+                            🇬🇧 English
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- File Upload -->
+                <!-- =============================== -->
+
+                <label for="fileInput" class="upload-btn">
+                    Choose File
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*,.pdf"
+                    hidden
+                >
+
+                <p id="fileName" class="file-name">
+                    No file selected
+                </p>
+
+
+                <button id="analyzeBtn" class="analyze-btn">
+                    Analyze Document
+                </button>
+
+
+                <!-- =============================== -->
+                <!-- Important Information -->
+                <!-- =============================== -->
+
+                <div
+                    id="importantInfo"
+                    class="result-box"
+                    style="display: none;"
+                >
+
+                    <h2>📌 Important Information</h2>
+
+                    <div id="importantDetails"></div>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- Simple Explanation -->
+                <!-- =============================== -->
+
+                <div
+                    id="simpleExplanation"
+                    class="result-box"
+                    style="display: none;"
+                >
+
+                    <h2>✨ Simple Explanation</h2>
+
+                    <p id="explanationText"></p>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- Listen -->
+                <!-- =============================== -->
+
+                <div
+                    id="listenSection"
+                    class="result-box"
+                    style="display: none;"
+                >
+
+                    <h2>🔊 Listen</h2>
+
+                    <button id="listenBtn" class="analyze-btn">
+                        🔊 Listen to Explanation
+                    </button>
+
+                </div>
+
+
+                <!-- =============================== -->
+                <!-- Extracted Text -->
+                <!-- =============================== -->
+
+                <div
+                    id="result"
+                    class="result-box"
+                    style="display: none;"
+                >
+
+                    <h2>📄 Extracted Text</h2>
+
+                    <div id="extractedText"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- How It Works -->
+        <!-- =============================== -->
+
+        <section class="how-section" id="how">
+
+            <h2>How AccessBridge Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div>📤</div>
+                    <h3>1. Upload</h3>
+                    <p>Upload your document or image.</p>
+                </div>
+
+                <div class="step">
+                    <div>🤖</div>
+                    <h3>2. AI Analysis</h3>
+                    <p>AI understands and extracts important information.</p>
+                </div>
+
+                <div class="step">
+                    <div>✨</div>
+                    <h3>3. Simplify</h3>
+                    <p>Complex information becomes easy to understand.</p>
+                </div>
+
+                <div class="step">
+                    <div>🔊</div>
+                    <h3>4. Listen</h3>
+                    <p>Listen to the simplified information.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- About -->
+        <!-- =============================== -->
+
+        <section class="about-section" id="about">
+
+            <h2>Why AccessBridge?</h2>
+
+            <p>
+                AccessBridge AI is designed to make important digital
+                information easier to understand and access for students,
+                elderly users and people who face reading difficulties.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 AccessBridge AI |
+            Built for HackNowa Global Hackathon
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
